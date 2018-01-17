@@ -1,7 +1,7 @@
 
 // Declaration of variables
-var dataBox1 = [], dataBox2 = [], dataBox3 = [], dataBox4 = [],
-    chart1 = null, chart2 = null, chart3 = null, chart4 = null;
+var dataBox1 = [], dataBox2 = [],
+    chart1 = null, chart2 = null;
 
 /**
  * Initialization 
@@ -39,25 +39,6 @@ function init() {
             drawGraph(dataBox2[0], dataBox2[1], dataBox2[2], metadata, val, dataBox2[3], dataBox2[4]);
         });
     });
-
-    $("#select2").change(function() {
-        var val = $("#select2").val();
-        chart3.destroy();
-        $.getJSON( dataBox3[3], function(metadata) {
-            // Draw a visualization
-            drawGraph(dataBox3[0], dataBox3[1], dataBox3[2], metadata, val, dataBox3[3], dataBox3[4]);
-        });
-    });
-
-    $("#select3").change(function() {
-        var val = $("#select3").val();
-        chart4.destroy();
-        $.getJSON( dataBox4[3], function(metadata) {
-            // Draw a visualization
-            drawGraph(dataBox4[0], dataBox4[1], dataBox4[2], metadata, val, dataBox4[3], dataBox4[4]);
-        });
-    });
-
     return;
 };
 
@@ -283,10 +264,6 @@ function drawGraph(dataJson, randGraph, position, metadata, selectVal, metadataL
         dataBox = dataBox1;
     } else if(position === 1) {
         dataBox = dataBox2;
-    } else if(position === 2) {
-        dataBox = dataBox3;
-    } else if(position === 3) {
-        dataBox = dataBox4;
     }
 
     // Parse data to draw chart
@@ -391,10 +368,6 @@ function drawGraph(dataJson, randGraph, position, metadata, selectVal, metadataL
         chart1 = chart;
     } else if(position === 1) {
         chart2 = chart;
-    } else if(position === 2) {
-        chart3 = chart;
-    } else if(position === 3) {
-        chart4 = chart;
     }
 };
 

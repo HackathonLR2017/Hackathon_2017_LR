@@ -1,5 +1,17 @@
 body {
-	margin-top: 70px;
+	margin-top: 20px;
+}
+
+#infoButtonVisu {
+	position: fixed;
+    top: 20px;
+    right: 20px; 
+}
+
+#exclamationButtonVisu {
+	position: fixed;
+    top: 20px;
+    right: 80px; 
 }
 
 
@@ -11,9 +23,9 @@ body {
 	padding-left: 15px;
 }
 #donnees {
-	width: 30%;
+	width: 340px;
 	position: fixed;
-	top: 100px;
+	top: 0px;
 }
 .checkData {
 	cursor: pointer;
@@ -65,12 +77,12 @@ body {
 /* CONTENT */
 #titlePage {
 	width: 68%;
-	margin-left: 30%;
+	margin-left: 340px;
+	margin-top: -2px;
 }
 #contentPage {
 	width: 68%;
-	top: 120px;
-	margin-left: 30%;
+	margin-left: 340px;
 }
 #my_table1 {
 	margin-top: 25px;

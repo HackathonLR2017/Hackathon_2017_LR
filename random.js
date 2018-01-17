@@ -7,7 +7,7 @@
 function generateAleatoryVariables() {
     // Get random values between 1 and 4 and put them in an array
     var numberArray = [];
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 2; i++) {
         numberArray.push(Math.floor(Math.random() * 3));
     }
 

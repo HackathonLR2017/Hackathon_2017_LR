@@ -35,41 +35,6 @@
     </head>
 
     <!-- ============================ -->
-    <!-- ========== Navbar ========== -->
-    <!-- ============================ -->
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Navbar responsive -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">CoustaData</a>
-        </div>
-
-        <!-- navbar -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="demarche.php">La démarche</a></li>
-            <li><a href="visu.php">Visualisation des données</a></li>
-            <li><a href="utiliserPlateforme.php">Utiliser la plateforme</a></li>
-            <li><a href="contactezNous.php">Contactez-nous</a></li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="mentionsLegales.php">Mentions légales</a></li>
-          </ul>
-
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-
-    <!-- ============================ -->
     <!-- =========== Body =========== -->
     <!-- ============================ -->
     <body>
@@ -95,16 +60,33 @@
             </div>
 
             </br>
-			
-            <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>-->
+            <a id="infoButtonVisu" href="index.php" class="glyphicon glyphicon-info-sign btn btn-default bottomButton" aria-hidden="true"></a>
+			<a id="exclamationButtonVisu" class="glyphicon glyphicon-exclamation-sign btn btn-default bottomButton" aria-hidden="true" data-toggle="modal" data-target="#example"></a>
+
+                <div class="modal fade" tabindex="-1" role="dialog" id="example">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <h4 class="modal-title">Vous rencontrer un problème ? </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p style="margin-bottom:7px;">Ce message sera envoyé par mail à la ville.</p>
+                                <textarea class="form-control" style="min-width: 100%"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-default" data-dismiss="modal">Envoyer</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
 			<div class="bord">
 			    <div class="row" id="donnees">
 		            <div id="tableDonnees" class="col-xs-12 col-sm-8 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <h2 id="titleLateralMenu">Table de données</h2>
                         <div class="accordion">
                             <div class="panel-group" id="accordion1"> <!-- class : sidenav--> 
-                                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-
             					<div class="panel panel-default">
             						<div class="panel-heading active">
             							<h3 class="panel-title">
@@ -291,18 +273,6 @@
                           <h3>Affichage des liens de téléchargement</h3>
                       </div>
                   </div>
-                </div>
-
-                <div id="timeLine">
-                    <input id="timeControl" type="range" step="1" onchange="showValue()"/>
-                    <output id="show"></output>
-                    <datalist id="tickList"></datalist>
-                    <script>
-                        function showValue(){
-                                var valof = $('#timeControl').val();
-                                $('#show').text(valof);
-                        }
-                    </script>
                 </div>
 
                 <div class="page-header">
