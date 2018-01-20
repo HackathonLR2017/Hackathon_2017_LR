@@ -84,6 +84,8 @@ body {
 	width: 68%;
 	margin-left: 340px;
 }
+
+/*
 #my_table1 {
 	margin-top: 25px;
 	overflow-y: scroll;
@@ -92,6 +94,8 @@ body {
 	width: 100%;
 	display: block;
 }
+*/
+
 #rs {
 	display: inline;
 }
