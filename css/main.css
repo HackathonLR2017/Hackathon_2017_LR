@@ -2547,7 +2547,7 @@ th {
 
 th:after {
 	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
-	content: '';
+/*	content: ''; */
 	display: block;
 	height: 25%;
 	left: 0;
@@ -2605,10 +2605,10 @@ tr:last-of-type td:last-child {
 	box-shadow: inset -1px -1px 0 #fff;
 }	
 
-tbody:hover td {
-	color: transparent;
+/*tbody:hover td {
+	color: transparent; 
 	text-shadow: 0 0 3px #aaa;
-}
+}*/
 
 tbody:hover tr:hover td {
 	color: #444;
